@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Hotdog</title>
-    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h2>Joe's Hotdog Stand Order</h2>
 
+<!-- Order form where customers enter their info -->
 <form id="orderForm">
-<label for="person">Your Name:</label>
-<input type="text" id="person" name="person" placeholder="Enter your name" required>
+    <!-- Customer name input -->
+    <label for="person">Your Name:</label>
+    <input type="text" id="person" name="person" placeholder="Enter your name" required>
 
-<label for="numDogs">Hot Dogs ($4.99 each):</label>
-<input type="number" id="numDogs" name="numDogs" min="0" value="0">
+    <!-- Number of hotdogs -->
+    <label for="numDogs">Hot Dogs ($4.99 each):</label>
+    <input type="number" id="numDogs" name="numDogs" min="0" value="0">
 
-<label for="numFries">Fries ($3.99 each):</label>
-<input type="number" id="numFries" name="numFries" min="0" value="0">
+    <!-- Number of fries -->
+    <label for="numFries">Fries ($3.99 each):</label>
+    <input type="number" id="numFries" name="numFries" min="0" value="0">
 
-<label for="numSoda">Drinks ($1.79 each):</label>
-<input type="number" id="numSoda" name="numSoda" min="0" value="0">
+    <!-- Number of drinks -->
+    <label for="numSoda">Drinks ($1.79 each):</label>
+    <input type="number" id="numSoda" name="numSoda" min="0" value="0">
 
-<button type="submit" class = "submit" onclick="showHotdog()">Calculate Total</button>
+    <!-- Submit button to calculate the total -->
+    <button type="submit" class="submit" onclick="showHotdog()">Calculate Total</button>
 </form>
 
+<!-- This is where the receipt will show up -->
 <div id="output"></div>
 
-<script src = "script.js" defer></script>
+<!-- Link to the JavaScript file -->
+<script src="script.js" defer></script>
 </body>
 </html>

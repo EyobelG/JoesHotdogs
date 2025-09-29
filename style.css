@@ -55,14 +55,14 @@ button.submit:hover {
 
 #output img {
   margin-top: 10px;
-  width: 200px;  /* adjust size if needed */
+  width: 200px; 
 }
 
 #orderForm {
-  width: 80%; /* Or any desired width for the container */
-  margin: 0 auto; /* Centers the container horizontally */
-  border: 1px solid #ccc; /* Optional: for visual reference */
-  padding: 30px; /* Optional: for spacing */
+  width: 80%; 
+  margin: 0 auto; 
+  border: 1px solid #ccc; 
+  padding: 30px;
 }
 
 #output {

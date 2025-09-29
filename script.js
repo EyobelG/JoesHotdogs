@@ -31,17 +31,16 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
     let TAXED = SUBTOTAL * (1 + MA_MEALS_TAX);
     let TAX_AMOUNT = SUBTOTAL * MA_MEALS_TAX;
 
-      // Build the output string step by step
+    // Build the output string step by step
     let outputHTML = `
       <h3>Hello, ${person}!</h3>
       <p>You have ordered ${numDogs} hot dog${numDogs > 1 ?"s":""}, costing: $${showMoney(HOTDOG_PRICE * numDogs)},
        ${numFries} fr${numFries > 1 ?"ies":"y"}, costing $${showMoney(FRIES_PRICE * numFries)}, and ${numSoda}
-      drink${numSoda > 1 ?"s":""}, which cost you $${showMoney(DRINKS_PRICE * numSoda)}! <br>
-      Before any discount, your subtotal is $${showMoney(SUBTOTAL_BEFORE)}
-      <br>`;
-
+      drink${numSoda > 1 ?"s":""}, which cost you $${showMoney(DRINKS_PRICE * numSoda)}! <br>`;
     // Add discount info conditionally
     if (discountApplied) {
+        outputHTML += `Before any discount, your subtotal is $${showMoney(SUBTOTAL_BEFORE)}
+      <br>`;
         outputHTML += `After discount, your total became $${showMoney(SUBTOTAL)} <br>`;
     } else {
         outputHTML += `No discount applied (subtotal must be $30 or more to earn one). <br>`;
@@ -51,8 +50,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
     outputHTML += `You were taxed $${showMoney(TAX_AMOUNT)}.
     </p>
     <p><strong>Total with Tax:</strong> $${showMoney(TAXED)}</p>`;
-    
-    
+
     // Set it once at the end
 
 
